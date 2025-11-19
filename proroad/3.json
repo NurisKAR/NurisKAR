@@ -1,0 +1,95 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "abdrakhmanova_kievskaya_intersection",
+"location_name": "Перекрёсток улицы Абдрахманова и улицы Киевская, Бишкек",
+"coordinates": { "lat": 42.87480, "lon": 74.60390 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Очереди на всех четырёх подходах, особенно северный и южный по Абдрахманова; короткие накопители, интенсивный поток с Чуй и остановки ОТ создают вторые циклы.",
+"primary_causes": [
+"Высокая интенсивность по Абдрахманова как транзитной магистрали центра",
+"Короткие накопители на всех подходах",
+"Левые повороты без выделенной фазы",
+"Остановка маршруток и такси у перекрёстка"
+],
+"is_recurrent_issue": true,
+"confidence": 0.78
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Выделенная фаза левых поворотов",
+"description": "Добавить отдельные фазы левых поворотов на Абдрахманова и Киевской для устранения конфликтов со встречным движением.",
+"estimated_cost_usd": 110000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 24,
+"avg_delay_minutes_reduction": 2.1
+},
+"effectiveness_score": 70,
+"payback_period_years": 1.9,
+"environmental_impact": "Снижение выбросов CO₂ на ~8%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 2,
+"type": "Перенос остановок и запрет стоянки",
+"description": "Перенести остановки маршруток на 80 м от перекрёстка, запретить посадку/высадку и стоянку в зоне узла.",
+"estimated_cost_usd": 30000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 16,
+"avg_delay_minutes_reduction": 1.3
+},
+"effectiveness_score": 74,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение выбросов на ~5%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 3,
+"type": "Удлинение накопителей и корректировка геометрии",
+"description": "Расширить полосы и удлинить накопители на всех четырёх подходах для увеличения пропускной способности в пиковые часы.",
+"estimated_cost_usd": 520000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 34,
+"avg_delay_minutes_reduction": 2.9
+},
+"effectiveness_score": 56,
+"payback_period_years": 4.6,
+"environmental_impact": "Снижение выбросов CO₂ на ~13%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Почасовые интенсивности по подходам",
+"Доли ТС (легк./ОТ/груз./такси)",
+"Длины очередей по фазам",
+"Пешеходные потоки",
+"Данные о задержках по направлениям"
+],
+"consequence_if_ignored": "В горизонте 1–3 лет задержка вырастет с ~10 до 15–18 минут; очереди будут стабильно занимать два соседних узла, ухудшится работа ОТ, выбросы CO₂ увеличатся на 15–25%, а трафик начнёт уходить на параллельные жилые улицы."
+}

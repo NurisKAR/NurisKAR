@@ -1,0 +1,95 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "manas_moskovskaya_intersection",
+"location_name": "Перекрёсток проспекта Манаса и улицы Московская, Бишкек",
+"coordinates": { "lat": 42.87190, "lon": 74.59980 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Тяжёлое пересечение: длинные очереди на Манаса в обе стороны, маршрутки останавливаются у перекрёстка, короткие накопители на Московской создают третьи циклы.",
+"primary_causes": [
+"Очень высокая интенсивность продольного трафика по Манаса",
+"Остановки маршруток и такси в непосредственной близости к перекрёстку",
+"Короткие накопители на Московской",
+"Несогласованные светофоры с узлами север–юг"
+],
+"is_recurrent_issue": true,
+"confidence": 0.79
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Перенос остановок ОТ",
+"description": "Перенести остановки ОТ на расстояние 100–130 м от пересечения, исключить посадку/высадку в створе светофора.",
+"estimated_cost_usd": 32000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 15,
+"avg_delay_minutes_reduction": 1.2
+},
+"effectiveness_score": 75,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение выбросов на ~6%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 2,
+"type": "Адаптивно-координированное управление",
+"description": "Оптимизация фаз, приоритет Манаса в утренний пик, координация со светофорами на Фрунзе и Жибек Жолу.",
+"estimated_cost_usd": 150000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 22,
+"avg_delay_minutes_reduction": 1.9
+},
+"effectiveness_score": 65,
+"payback_period_years": 2.4,
+"environmental_impact": "Снижение CO₂ на ~9%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 3,
+"type": "Удлинение накопителей",
+"description": "Увеличение полос накопления на Московской на 25–45 м, реконфигурация бордюров.",
+"estimated_cost_usd": 350000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 31,
+"avg_delay_minutes_reduction": 2.6
+},
+"effectiveness_score": 55,
+"payback_period_years": 4.6,
+"environmental_impact": "Снижение CO₂ на ~12%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Интенсивности потоков по Манаса и Московской",
+"Доли ТС (легковые/ОТ/такси/груз.)",
+"Длины очередей утром и вечером",
+"Пешеходные потоки на всех переходах",
+"Текущие параметры светофорной координации"
+],
+"consequence_if_ignored": "За 1–3 года задержки возрастут с ~9–11 до 15–20 минут; увеличится частота третьих циклов, усилится транзитный объезд по соседним улицам, выбросы CO₂ вырастут на 20–25%."
+}

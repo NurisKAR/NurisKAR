@@ -1,0 +1,96 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "tolstogo_logvinenko_panfylova_corridor",
+"location_name": "Коридор: ул. Льва Толстого — ул. Логвиненко — ул. Панфилова, Бишкек",
+"coordinates": { "lat": 42.84290, "lon": 74.60320 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Вытянутый затор вдоль Льва Толстого в восточном направлении: узкая геометрия коридора, высокая доля грузового транспорта, остановки в створе перекрёстков, вторые/третьи циклы на Логвиненко и Панфилова.",
+"primary_causes": [
+"Высокая нагрузка грузового и транзитного транспорта",
+"Короткие накопители на Логвиненко и Панфилова",
+"Остановка ОТ у перекрёстков",
+"Несогласованные светофоры вдоль всего коридора"
+],
+"is_recurrent_issue": true,
+"confidence": 0.72
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Светофорная координация коридора",
+"description": "Объединить Льва Толстого–Логвиненко–Панфилова в единый координированный коридор с адаптивными оффсетами.",
+"estimated_cost_usd": 260000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 27,
+"avg_delay_minutes_reduction": 2.4
+},
+"effectiveness_score": 64,
+"payback_period_years": 2.4,
+"environmental_impact": "Снижение CO₂ на ~10% на протяжении 1 км коридора",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 2,
+"type": "Перенос остановок ОТ",
+"description": "Смещение всех остановок на 70–120 м от перекрёстков, запрет стоянки и высадки в зоне влияния светофорных узлов.",
+"estimated_cost_usd": 40000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 16,
+"avg_delay_minutes_reduction": 1.4
+},
+"effectiveness_score": 73,
+"payback_period_years": 0.9,
+"environmental_impact": "Снижение выбросов на ~6%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 3,
+"type": "Локальная реконфигурация накопителей",
+"description": "Удлинить накопители и расширить подходы на Логвиненко и Панфилова (дополнительные 25–40 м), улучшить геометрию въездов.",
+"estimated_cost_usd": 530000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 34,
+"avg_delay_minutes_reduction": 2.9
+},
+"effectiveness_score": 56,
+"payback_period_years": 4.7,
+"environmental_impact": "Снижение CO₂ на ~12%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Помесячные и почасовые интенсивности по коридору",
+"Грузовая доля и распределение по направлениям",
+"Длины очередей на каждом узле",
+"Пешеходные потоки в пике",
+"Синхронизация соседних светофоров",
+"Скоростные профили на Льва Толстого"
+],
+"consequence_if_ignored": "Без вмешательства в 1–3 года задержка возрастёт с ~8 до 13–17 минут вдоль всего коридора; появятся устойчивые третие циклы, выбросы CO₂ увеличатся на 15–25%, возрастёт транзитный объезд через жилые улицы и дворы, снизится надёжность движения медицинского и грузового транспорта."
+}

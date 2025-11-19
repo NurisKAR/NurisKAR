@@ -1,0 +1,95 @@
+ChatGPT said:{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "moskovskaya_abdrakhmanova_intersection",
+"location_name": "Перекрёсток улицы Московская и улицы Абдрахманова, Бишкек",
+"coordinates": { "lat": 42.87140, "lon": 74.60400 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Максимальная загрузка на Абдрахманова север–юг, остановки маршруток у перекрёстка блокируют полосу, короткие накопители на Московской формируют вторые и третьи циклы.",
+"primary_causes": [
+"Сверхвысокая интенсивность продольного потока по Абдрахманова",
+"Остановка маршруток у перекрёстка",
+"Короткие накопители на Московской",
+"Нескоординированная работа светофоров по коридору"
+],
+"is_recurrent_issue": true,
+"confidence": 0.80
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Перенос остановок ОТ",
+"description": "Сместить остановки маршруток и автобусов на 100–130 м от перекрёстка, исключив блокировку правых полос.",
+"estimated_cost_usd": 30000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 16,
+"avg_delay_minutes_reduction": 1.3
+},
+"effectiveness_score": 75,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение CO₂ примерно на 6%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 2,
+"type": "Адаптивная координация движения",
+"description": "Транспортно-зависимая оптимизация фаз с приоритетом Абдрахманова, синхронизация узлов по Московской и Абдрахманова.",
+"estimated_cost_usd": 160000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 23,
+"avg_delay_minutes_reduction": 1.9
+},
+"effectiveness_score": 66,
+"payback_period_years": 2.4,
+"environmental_impact": "Снижение CO₂ примерно на 9%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 3",
+"type": "Удлинение накопителей",
+"description": "Реконструкция геометрии: удлинение накопителей на Московской на 25–45 м, перестройка бордюров.",
+"estimated_cost_usd": 360000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 30,
+"avg_delay_minutes_reduction": 2.4
+},
+"effectiveness_score": 55,
+"payback_period_years": 4.7,
+"environmental_impact": "Снижение CO₂ примерно на 12%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Интенсивности потоков по Абдрахманова и Московской",
+"Состав трафика (легк./ОТ/груз./такси)",
+"Длины очередей по фазам",
+"Пешеходные потоки",
+"Существующие параметры светофорной координации"
+],
+"consequence_if_ignored": "В течение 1–3 лет задержки могут вырасти до 15–22 минут, третьи циклы станут нормой, увеличится объездной трафик через жилые кварталы, выбросы CO₂ возрастут на 20–30%."
+}

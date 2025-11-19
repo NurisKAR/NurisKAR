@@ -1,0 +1,95 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "chui_kurmanzhan_datka_intersection",
+"location_name": "Перекрёсток проспекта Чуй и улицы Курманжан Датка, Бишкек",
+"coordinates": { "lat": 42.86690, "lon": 74.62950 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Основное узкое место — южный и восточный подходы: очереди выходят за два цикла из-за высокой доли левых поворотов, остановок маршруток и пересечения мощных потоков с Чуй.",
+"primary_causes": [
+"Левые повороты без выделенной фазы",
+"Остановка маршруток у перекрёстка",
+"Высокая интенсивность на Чуй в утренний пик",
+"Короткие накопители на Курманжан Датка"
+],
+"is_recurrent_issue": true,
+"confidence": 0.75
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Выделенная фаза левых поворотов",
+"description": "Добавить отдельную фазу для левых поворотов с улицы Курманжан Датка и восточного подхода Чуй.",
+"estimated_cost_usd": 90000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 22,
+"avg_delay_minutes_reduction": 2.0
+},
+"effectiveness_score": 71,
+"payback_period_years": 1.7,
+"environmental_impact": "Снижение CO₂ на ~7% в зоне 500 м",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 2,
+"type": "Перенос остановок маршруток",
+"description": "Вынести остановки ОТ на 70–100 м от перекрёстка, запретить стоянку и посадку-высадку в створе перекрёстка.",
+"estimated_cost_usd": 30000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 14,
+"avg_delay_minutes_reduction": 1.1
+},
+"effectiveness_score": 73,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение выбросов на ~5%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 3,
+"type": "Удлинение накопителей",
+"description": "Расширить и удлинить полосы накопления для левых и прямых направлений на южном подходе Курманжан Датка.",
+"estimated_cost_usd": 420000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 30,
+"avg_delay_minutes_reduction": 2.6
+},
+"effectiveness_score": 55,
+"payback_period_years": 4.2,
+"environmental_impact": "Снижение CO₂ на ~12% в радиусе 500 м",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Почасовые интенсивности по каждому подходу",
+"Доли ТС (легк./груз./ОТ/такси)",
+"Длины очередей по циклам",
+"Пешеходные потоки по фазам",
+"Профили насыщения и скорости по Чуй и Курманжан Датка"
+],
+"consequence_if_ignored": "В горизонте 1–3 лет средняя задержка возрастёт с ~9 до 13–16 минут, очереди будут регулярно уходить на два соседних перекрёстка, выбросы CO₂ увеличатся на 15–20%, ухудшится надёжность движения ОТ и возрастёт транзитный объезд через жилые улицы."
+}

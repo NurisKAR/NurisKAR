@@ -1,0 +1,95 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "akhunbaeva_maldybaeva_intersection",
+"location_name": "Перекрёсток улицы Ахунбаева и улицы Малдыбаева, Бишкек",
+"coordinates": { "lat": 42.83960, "lon": 74.60340 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Высокая",
+"problem_summary": "Основное узкое место — восточный и западный подходы по Ахунбаева: интенсивный прямой поток, остановки маршруток у перекрёстка, узкие подходы Малдыбаева создают вторые циклы.",
+"primary_causes": [
+"Высокая интенсивность по Ахунбаева в утренний пик",
+"Остановка маршруток и такси в створе перекрёстка",
+"Низкая пропускная способность узкой Малдыбаева",
+"Короткие накопители и несогласованность фаз"
+],
+"is_recurrent_issue": true,
+"confidence": 0.75
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Перенос остановок ОТ",
+"description": "Смещение остановок маршруток на 70–100 м от пересечения, запрет посадки/высадки в зоне влияния узла.",
+"estimated_cost_usd": 25000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 14,
+"avg_delay_minutes_reduction": 1.0
+},
+"effectiveness_score": 74,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение выбросов на ~5%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 2,
+"type": "Адаптивное светофорное регулирование",
+"description": "Добавление детекции транспорта и перераспределение фаз в пользу Ахунбаева в часы пика.",
+"estimated_cost_usd": 130000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 22,
+"avg_delay_minutes_reduction": 1.7
+},
+"effectiveness_score": 66,
+"payback_period_years": 2.1,
+"environmental_impact": "Снижение CO₂ на ~8%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 3,
+"type": "Удлинение накопителей и локальная реконфигурация",
+"description": "Удлинить накопители на Малдыбаева и локально расширить подход (20–40 м), чтобы снизить вторые циклы.",
+"estimated_cost_usd": 310000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 30,
+"avg_delay_minutes_reduction": 2.3
+},
+"effectiveness_score": 55,
+"payback_period_years": 4.2,
+"environmental_impact": "Снижение CO₂ на ~12%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Интенсивности по каждому направлению",
+"Доли ТС (легк./ОТ/груз./такси)",
+"Длины очередей утром и вечером",
+"Пешеходные потоки по фазам",
+"Скоростные профили по Ахунбаева и Малдыбаева"
+],
+"consequence_if_ignored": "Через 1–3 года задержка увеличится с ~6 до 10–14 минут; остановки ОТ продолжат блокировать полосу, возрастёт транзитный объезд через жилые районы, выбросы CO₂ вырастут на 12–18%."
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.1",
+  "prompt_version": "2025-09-30",
+  "intersection": {
+    "intersection_id": "molodaya_gvardiya_chui_intersection",
+    "location_name": "Перекрёсток Молодая Гвардия / Чуй, Бишкек",
+    "coordinates": { "lat": 42.87890, "lon": 74.60660 },
+    "osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+  },
+  "observation": {
+    "observed_at_local": "2025-09-30T08:20:00+06:00",
+    "time_of_day": "Утро",
+    "weekday": "Среда",
+    "congestion_level": "Критическая",
+    "problem_summary": "Основной поток с севера по Молодой Гвардии полностью перегружен из-за перехода, короткой фазы и узкого участка перед поворотами. Чуй стоит в западном направлении; очереди на левый поворот формируют блокировку перекрёстка.",
+    "primary_causes": [
+      "Высокий транзитный поток с юга и севера вдоль Молодой Гвардии",
+      "Короткая длительность зелёной фазы на прямом направлении",
+      "Узкое место перед переходом и большая пешеходная нагрузка",
+      "Блокировка полос автомобилями, ожидающими левый поворот",
+      "Сильная зависимость от светофора на Чуй / Панфилова"
+    ],
+    "is_recurrent_issue": true,
+    "confidence": 0.86
+  },
+  "proposed_solutions": [
+    {
+      "order": 1,
+      "type": "Адаптивная корректировка светофорного цикла",
+      "description": "Увеличить зелёную фазу для прямого направления Молодая Гвардия на 8–12 секунд. Синхронизировать с Чуй / Панфилова и Чуй / Абдрахманова.",
+      "estimated_cost_usd": 120000,
+      "implementation_difficulty": "Средняя",
+      "expected_effect": {
+        "delay_reduction_percent": 22,
+        "avg_delay_minutes_reduction": 2.0
+      },
+      "effectiveness_score": 64,
+      "payback_period_years": 2.0,
+      "environmental_impact": "Снижение CO₂ около 7%",
+      "public_impact": "Высокий",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Средний"
+      }
+    },
+    {
+      "order": 2,
+      "type": "Выделение отдельной полосы для левого поворота",
+      "description": "Переразметка участка Чуй для формирования отдельного левого поворота, чтобы убрать блокировку прямых потоков.",
+      "estimated_cost_usd": 490000,
+      "implementation_difficulty": "Высокая",
+      "expected_effect": {
+        "delay_reduction_percent": 30,
+        "avg_delay_minutes_reduction": 2.8
+      },
+      "effectiveness_score": 76,
+      "payback_period_years": 4.3,
+      "environmental_impact": "Снижение CO₂ около 13%",
+      "public_impact": "Высокий",
+      "risks": {
+        "land_acquisition": true,
+        "uti_relocation": true,
+        "stakeholder_risk": "Высокий"
+      }
+    },
+    {
+      "order": 3,
+      "type": "Оптимизация пешеходного перехода",
+      "description": "Перенос перехода на 20–30 м от перекрёстка либо установка пешеходного островка, чтобы уменьшить трение потоков.",
+      "estimated_cost_usd": 90000,
+      "implementation_difficulty": "Средняя",
+      "expected_effect": {
+        "delay_reduction_percent": 14,
+        "avg_delay_minutes_reduction": 1.0
+      },
+      "effectiveness_score": 49,
+      "payback_period_years": 1.8,
+      "environmental_impact": "Снижение CO₂ около 4%",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": true,
+        "stakeholder_risk": "Средний"
+      }
+    }
+  ],
+  "data_needed_for_refinement": [
+    "Интенсивности по четырём направлениям Молодой Гвардии",
+    "Интенсивности левоповоротных потоков",
+    "Пешеходная нагрузка по фазам",
+    "Суточные профили Чуй (запад–восток)",
+    "Текущий светофорный цикл и межзеленые"
+  ],
+  "consequence_if_ignored": "Задержки вырастут до 18–25 минут, образуется цепная блокировка по Молодой Гвардии на 400–600 м, ухудшится пропускная способность Чуй и увеличится аварийность на переходе."
+}

@@ -1,0 +1,95 @@
+ChatGPT said:{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "chui_manas_intersection",
+"location_name": "Перекрёсток проспекта Чуй и проспекта Манаса, Бишкек",
+"coordinates": { "lat": 42.87680, "lon": 74.59390 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Основная задержка на восточном и западном подходах по проспекту Чуй; короткие накопители, конфликт левых поворотов, плотный транзит через центр, остановки ОТ в створе перекрёстка.",
+"primary_causes": [
+"Высокая интенсивность транзита по Чуй",
+"Левые повороты без выделенной фазы",
+"Остановка общественного транспорта у пересечения",
+"Несогласованность циклов со смежными светофорами"
+],
+"is_recurrent_issue": true,
+"confidence": 0.75
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Адаптивное светофорное регулирование",
+"description": "Внедрение детекторов и адаптивных фаз с координацией вдоль всего коридора проспекта Чуй.",
+"estimated_cost_usd": 250000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 28,
+"avg_delay_minutes_reduction": 2.8
+},
+"effectiveness_score": 63,
+"payback_period_years": 2.2,
+"environmental_impact": "Снижение CO₂ на ~10% в радиусе 500 м",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 2,
+"type": "Выделенная фаза левого поворота",
+"description": "Добавление отдельной фазы левого поворота для разгрузки конфликтов на подходах по Чуй и Манаса.",
+"estimated_cost_usd": 90000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 18,
+"avg_delay_minutes_reduction": 1.7
+},
+"effectiveness_score": 68,
+"payback_period_years": 1.6,
+"environmental_impact": "Снижение выбросов на ~6%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Низкий"
+}
+},
+{
+"order": 3,
+"type": "Перенос остановок ОТ",
+"description": "Смещение остановок маршруток и автобусов на 80–120 м от перекрёстка.",
+"estimated_cost_usd": 30000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 10,
+"avg_delay_minutes_reduction": 1.0
+},
+"effectiveness_score": 71,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение выбросов на ~5%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+}
+],
+"data_needed_for_refinement": [
+"Почасовые интенсивности по подходам",
+"Доли ТС (легк./общ. трансп./такси/груз.)",
+"Длины очередей по направлениям",
+"Пешеходные потоки по циклам",
+"Профили скоростей и насыщения"
+],
+"consequence_if_ignored": "В горизонте 1–3 лет задержка вырастет с ~9 до 13–16 минут, очереди по Чуй стабильно займут два соседних узла, вырастут выбросы на 15–20%, снизится надёжность общественного транспорта, увеличится риск перенаправления транзита на жилые кварталы."
+}

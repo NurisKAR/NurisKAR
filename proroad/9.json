@@ -1,0 +1,96 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "baitik_baatyra_corridor_tokombaev_suerkulova_to_jibek_jolu",
+"location_name": "Коридор улицы Байтика Баатыра от Токомбаева/Суеркулова до проспекта Жибек Жолу, Бишкек",
+"coordinates": { "lat": 42.85000, "lon": 74.61150 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Критическая",
+"problem_summary": "Коридор Байтик Баатыра перегружен на всём протяжении: многокилометровые очереди, узкие участки, остановки маршруток, конфликты левых поворотов, вторые и третьи циклы на ключевых узлах.",
+"primary_causes": [
+"Сверхвысокая интенсивность продольного трафика",
+"Остановки маршруток в створе перекрёстков",
+"Левые повороты без выделенной фазы на большинстве узлов",
+"Геометрические сужения и короткие накопители в середине коридора"
+],
+"is_recurrent_issue": true,
+"confidence": 0.72
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Светофорная координация всего коридора",
+"description": "Создание единой «зелёной волны» вдоль Байтик Баатыра с адаптивным управлением, детекцией и согласованием узлов от Токомбаева до Жибек Жолу.",
+"estimated_cost_usd": 450000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 30,
+"avg_delay_minutes_reduction": 3.0
+},
+"effectiveness_score": 63,
+"payback_period_years": 2.5,
+"environmental_impact": "Снижение CO₂ на ~12% вдоль 3 км коридора",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 2,
+"type": "Перенос остановок маршруток",
+"description": "Вынести все остановки ОТ на 80–120 м от перекрёстков, полностью исключив блокирование правой полосы.",
+"estimated_cost_usd": 60000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 18,
+"avg_delay_minutes_reduction": 1.8
+},
+"effectiveness_score": 73,
+"payback_period_years": 0.9,
+"environmental_impact": "Снижение выбросов на ~6%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 3,
+"type": "Геометрическое усиление коридора",
+"description": "Локальное расширение узких подходов, удлинение накопителей (30–60 м), добавление правоповоротных карманов на 4–5 ключевых перекрёстках.",
+"estimated_cost_usd": 1100000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 35,
+"avg_delay_minutes_reduction": 3.4
+},
+"effectiveness_score": 52,
+"payback_period_years": 5.0,
+"environmental_impact": "Снижение CO₂ на ~15%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Помесячные и почасовые интенсивности по каждому перекрёстку коридора",
+"Доли ТС (легк./ОТ/груз./такси)",
+"Профили скоростей вдоль Байтик Баатыра",
+"Длины очередей на всех узлах коридора",
+"Параметры существующей светофорной координации",
+"Пешеходные потоки на наиболее загруженных узлах"
+],
+"consequence_if_ignored": "В течение 1–3 лет задержки возрастут с ~10 до 15–20 минут, сформируются устойчивые третьи циклы на 5–6 перекрёстках подряд, возрастут выбросы CO₂ на 20–30%, усилится транзитный объезд через жилые районы, снизится пропускная способность общественного транспорта и аварийность вырастет на 10–15%."
+}

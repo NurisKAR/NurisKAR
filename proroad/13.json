@@ -1,0 +1,95 @@
+{
+"schema_version": "1.1",
+"prompt_version": "2025-09-30",
+"intersection": {
+"intersection_id": "manas_bokonbaeva_intersection",
+"location_name": "Перекрёсток проспекта Манаса и улицы Боконбаева, Бишкек",
+"coordinates": { "lat": 42.86990, "lon": 74.59970 },
+"osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+},
+"observation": {
+"observed_at_local": "2025-09-30T08:15:00+06:00",
+"time_of_day": "Утро",
+"weekday": "Вторник",
+"congestion_level": "Высокая",
+"problem_summary": "Затор на Манаса: плотный поток север–юг проходит через узкое место; остановки маршруток рядом со светофором; на Боконбаева короткие накопители вызывают вторые циклы.",
+"primary_causes": [
+"Высокая интенсивность магистрального трафика по Манаса",
+"Остановка маршруток и такси у перекрёстка",
+"Короткие накопители на Боконбаева",
+"Недостаточная координация со светофорами на Московской и Чокморова"
+],
+"is_recurrent_issue": true,
+"confidence": 0.78
+},
+"proposed_solutions": [
+{
+"order": 1,
+"type": "Перенос остановок ОТ",
+"description": "Перемещение остановок маршруток на 80–120 м от перекрёстка, установка ограждений для исключения несанкционированной посадки/высадки.",
+"estimated_cost_usd": 30000.0,
+"implementation_difficulty": "Низкая",
+"expected_effect": {
+"delay_reduction_percent": 14,
+"avg_delay_minutes_reduction": 1.0
+},
+"effectiveness_score": 74,
+"payback_period_years": 0.8,
+"environmental_impact": "Снижение выбросов примерно на 5%",
+"public_impact": "Средний",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Высокий"
+}
+},
+{
+"order": 2,
+"type": "Адаптивное регулирование",
+"description": "Внедрение видеодетекции и перераспределение фаз с приоритетом Манаса в пиковые часы; синхронизация с узлами выше и ниже по коридору.",
+"estimated_cost_usd": 150000.0,
+"implementation_difficulty": "Средняя",
+"expected_effect": {
+"delay_reduction_percent": 21,
+"avg_delay_minutes_reduction": 1.7
+},
+"effectiveness_score": 65,
+"payback_period_years": 2.3,
+"environmental_impact": "Снижение CO₂ примерно на 8%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": false,
+"uti_relocation": false,
+"stakeholder_risk": "Средний"
+}
+},
+{
+"order": 3,
+"type": "Удлинение накопителей",
+"description": "Увеличение длины накопительных участков и локальная реконфигурация подходов Боконбаева (20–40 м).",
+"estimated_cost_usd": 310000.0,
+"implementation_difficulty": "Высокая",
+"expected_effect": {
+"delay_reduction_percent": 28,
+"avg_delay_minutes_reduction": 2.1
+},
+"effectiveness_score": 56,
+"payback_period_years": 4.4,
+"environmental_impact": "Снижение CO₂ примерно на 12%",
+"public_impact": "Высокий",
+"risks": {
+"land_acquisition": true,
+"uti_relocation": true,
+"stakeholder_risk": "Средний"
+}
+}
+],
+"data_needed_for_refinement": [
+"Помесячные и почасовые интенсивности по Манаса и Боконбаева",
+"Состав транспортного потока (легк./ОТ/такси/груз.)",
+"Длины очередей на каждом подходе",
+"Пешеходные данные по направлениям",
+"Текущая координация соседних светофоров"
+],
+"consequence_if_ignored": "Через 1–3 года задержки вырастут с 7–9 до 12–16 минут, устойчивыми станут вторые и третьи циклы на северном и южном подходах, увеличится объездной транзит через жилые кварталы и выбросы CO₂ возрастут на 15–25%."
+}

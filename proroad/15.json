@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.1",
+  "prompt_version": "2025-09-30",
+  "intersection": {
+    "intersection_id": "jibek_jolu_almatinskaya_intersection",
+    "location_name": "Перекрёсток Жибек Жолу / Алматинская, Бишкек",
+    "coordinates": { "lat": 42.89190, "lon": 74.63930 },
+    "osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+  },
+  "observation": {
+    "observed_at_local": "2025-09-30T08:20:00+06:00",
+    "time_of_day": "Утро",
+    "weekday": "Вторник",
+    "congestion_level": "Критическая",
+    "problem_summary": "Алматинская полностью стоит в направлении север–юг; Жибек Жолу перегружена в сторону востока из-за подъёма на мост и локального сужения полос. Очереди доходят до 120–180 м. Фургоны и такси блокируют правые полосы.",
+    "primary_causes": [
+      "Сверхвысокий транзит Свердловского района через Алматинскую",
+      "Узкое горлышко на подъезде к путепроводу на Жибек Жолу",
+      "Неоптимальная работа светофора — недостаточно длинная фаза левого поворота",
+      "Парковка и остановки у рынка замедляют правую полосу"
+    ],
+    "is_recurrent_issue": true,
+    "confidence": 0.82
+  },
+  "proposed_solutions": [
+    {
+      "order": 1,
+      "type": "Удлинение накопителя Алматинской",
+      "description": "Увеличить длину накопителя на 35–50 м путём смещения бордюра и переразметки. Цель — убрать движение в два цикла.",
+      "estimated_cost_usd": 410000,
+      "implementation_difficulty": "Высокая",
+      "expected_effect": {
+        "delay_reduction_percent": 28,
+        "avg_delay_minutes_reduction": 2.2
+      },
+      "effectiveness_score": 71,
+      "payback_period_years": 4.1,
+      "environmental_impact": "Снижение CO₂ около 11%",
+      "public_impact": "Высокий",
+      "risks": {
+        "land_acquisition": true,
+        "uti_relocation": true,
+        "stakeholder_risk": "Средний"
+      }
+    },
+    {
+      "order": 2,
+      "type": "Транспортно-зависимая оптимизация светофора",
+      "description": "Удлинить зелёную фазу Алматинской на 10–15 сек в часы пик. Добавить адаптивное регулирование для Жибек Жолу с учётом потока на мост.",
+      "estimated_cost_usd": 140000,
+      "implementation_difficulty": "Средняя",
+      "expected_effect": {
+        "delay_reduction_percent": 20,
+        "avg_delay_minutes_reduction": 1.6
+      },
+      "effectiveness_score": 63,
+      "payback_period_years": 2.2,
+      "environmental_impact": "Снижение CO₂ около 7%",
+      "public_impact": "Высокий",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Средний"
+      }
+    },
+    {
+      "order": 3,
+      "type": "Перенос остановок и запрет стоянки",
+      "description": "Запретить парковку и остановку в зоне 80–120 м до перекрёстка, вынести остановки на боковые карманы.",
+      "estimated_cost_usd": 25000,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 14,
+        "avg_delay_minutes_reduction": 1.1
+      },
+      "effectiveness_score": 52,
+      "payback_period_years": 0.7,
+      "environmental_impact": "Снижение CO₂ около 5%",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Высокий"
+      }
+    }
+  ],
+  "data_needed_for_refinement": [
+    "Почасовые интенсивности Алматинской (4 направления)",
+    "Потоки на мосту Жибек Жолу и длина очередей при подъёме",
+    "Доли грузового и коммерческого транспорта",
+    "Пешеходная нагрузка по фазам",
+    "Точные параметры текущего светофорного цикла"
+  ],
+  "consequence_if_ignored": "Узкое место перед путепроводом станет полностью нестабильным; очереди будут доходить до 250–300 м, задержки вырастут до 17–25 минут, возрастёт количество объездов через частный сектор и риски ДТП на мосту."
+}
