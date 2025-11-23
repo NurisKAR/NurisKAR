@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.1",
+  "prompt_version": "2025-09-30",
+  "intersection": {
+    "intersection_id": "abdrakhmanova_kievskaya",
+    "location_name": "Перекрёсток улиц Абдрахманова и Киевская, Бишкек",
+    "coordinates": { "lat": 42.87441, "lon": 74.61161 },
+    "osm_ref": { "node_id": null, "way_id": null, "relation_id": null }
+  },
+  "observation": {
+    "observed_at_local": "2025-11-19T17:20:00+06:00",
+    "time_of_day": "Вечер",
+    "weekday": "Среда",
+    "congestion_level": "Высокая",
+    "problem_summary": "затор по Киевской в восточном и западном подходах; недостаточная пропускная способность прямого направления; конфликтные левоповоротные фазы",
+    "primary_causes": [
+      "высокая интенсивность по Киевской в часы пик",
+      "левые повороты без выделенных карманов блокируют прямое направление"
+    ],
+    "is_recurrent_issue": true,
+    "confidence": 0.78
+  },
+  "proposed_solutions": [
+    {
+      "order": 1,
+      "type": "Оптимизация светофорных фаз",
+      "description": "увеличение доли зелёного для прямого направления по Киевской; разнесение левых поворотов на отдельную фазу; корректировка оффсетов по коридору",
+      "estimated_cost_usd": 25_000.0,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 22,
+        "avg_delay_minutes_reduction": 1.8
+      },
+      "effectiveness_score": 63,
+      "payback_period_years": 0.8,
+      "environmental_impact": "Снижение CO₂ на ~6% в зоне перекрёстка",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Низкий"
+      }
+    },
+    {
+      "order": 2,
+      "type": "Левоповоротные карманы",
+      "description": "формирование коротких левоповоротных накопителей на обоих направлениях Киевской через перенос разметки и сдвиг осевой линии",
+      "estimated_cost_usd": 140_000.0,
+      "implementation_difficulty": "Средняя",
+      "expected_effect": {
+        "delay_reduction_percent": 34,
+        "avg_delay_minutes_reduction": 2.6
+      },
+      "effectiveness_score": 68,
+      "payback_period_years": 1.6,
+      "environmental_impact": "Снижение CO₂ на ~10% за счёт уменьшения стояния в очереди",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": true,
+        "stakeholder_risk": "Средний"
+      }
+    },
+    {
+      "order": 3,
+      "type": "Запрет части левых поворотов в пике",
+      "description": "введение временного запрета левых поворотов с 17:00 до 19:00 в направлении запад→юг для повышения пропускной способности прямого направления",
+      "estimated_cost_usd": 8_000.0,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 18,
+        "avg_delay_minutes_reduction": 1.2
+      },
+      "effectiveness_score": 57,
+      "payback_period_years": 0.4,
+      "environmental_impact": "Снижение CO₂ на ~4%",
+      "public_impact": "Низкий",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Средний"
+      }
+    }
+  ],
+  "data_needed_for_refinement": [
+    "Почасовые интенсивности по подходам",
+    "Доли ТС (легк./общ. трансп./такси/груз.)",
+    "Длины очередей",
+    "Пешеходные потоки по фазам",
+    "Профили скоростей и насыщения"
+  ],
+  "consequence_if_ignored": "Средняя задержка увеличится на 20–35% (до +3–4 минут), очереди по Киевской стабильно будут выходить за два цикла, возрастут выбросы на ~10%, повысится риск блокировки перекрёстка и смещения транзита на жилые улицы."
+}

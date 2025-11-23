@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.1",
+  "prompt_version": "2025-09-30",
+  "intersection": {
+    "intersection_id": "manas_moskovskaya",
+    "location_name": "Перекрёсток Манаса / Московская, Бишкек",
+    "coordinates": {
+      "lat": 42.87024,
+      "lon": 74.58770
+    },
+    "osm_ref": {
+      "node_id": null,
+      "way_id": null,
+      "relation_id": null
+    }
+  },
+  "observation": {
+    "observed_at_local": "2025-11-23T14:00:00+06:00",
+    "time_of_day": "Обед",
+    "weekday": "Воскресенье",
+    "congestion_level": "Критическая",
+    "problem_summary": "длинные очереди на северном и южном подходах Манаса; сильный транзит по Московской; заторы формируются во всех направлениях",
+    "primary_causes": [
+      "высокий транзит по коридору Московской",
+      "конфликтные левые повороты и короткие накопители",
+      "несогласованность светофоров вдоль Манаса"
+    ],
+    "is_recurrent_issue": true,
+    "confidence": 0.8
+  },
+  "proposed_solutions": [
+    {
+      "order": 1,
+      "type": "Адаптивный светофор",
+      "description": "введение транспортно-зависимого управления с перераспределением фаз и приоритетом для транзита по Московской",
+      "estimated_cost_usd": 52000.0,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 33,
+        "avg_delay_minutes_reduction": 3.0
+      },
+      "effectiveness_score": 72,
+      "payback_period_years": 1.2,
+      "environmental_impact": "Снижение CO₂ на ~9% в зоне перекрёстка",
+      "public_impact": "Высокий",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Низкий"
+      }
+    },
+    {
+      "order": 2,
+      "type": "Удлинение накопителей",
+      "description": "расширение и удлинение накопительных полос на направлении Манаса для предотвращения блокировок и снижения вторых/третьих циклов",
+      "estimated_cost_usd": 250000.0,
+      "implementation_difficulty": "Средняя",
+      "expected_effect": {
+        "delay_reduction_percent": 25,
+        "avg_delay_minutes_reduction": 2.0
+      },
+      "effectiveness_score": 54,
+      "payback_period_years": 3.1,
+      "environmental_impact": "Снижение CO₂ на ~7% благодаря уменьшению времени простоя",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": true,
+        "stakeholder_risk": "Средний"
+      }
+    },
+    {
+      "order": 3,
+      "type": "Оптимизация левых поворотов",
+      "description": "введение ограничений или защитных фаз для левых поворотов на обеих магистралях в пиковые периоды",
+      "estimated_cost_usd": 15000.0,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 18,
+        "avg_delay_minutes_reduction": 1.4
+      },
+      "effectiveness_score": 61,
+      "payback_period_years": 0.8,
+      "environmental_impact": "Снижение CO₂ на ~5% за счёт уменьшения количества конфликтов",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Низкий"
+      }
+    }
+  ],
+  "data_needed_for_refinement": [
+    "Почасовые интенсивности по подходам",
+    "Доли ТС (легк./общ. трансп./такси/груз.)",
+    "Длины очередей",
+    "Пешеходные потоки по фазам",
+    "Профили скоростей и насыщения"
+  ],
+  "consequence_if_ignored": "рост задержек на 35–50% (3–5 мин), удлинение очередей до 3 циклов, перегрузка коридоров Московской и Манаса, рост выбросов на 15–20% в горизонте 1–3 года"
+}

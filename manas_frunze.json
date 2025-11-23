@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.1",
+  "prompt_version": "2025-09-30",
+  "intersection": {
+    "intersection_id": "manas_frunze",
+    "location_name": "Перекрёсток Манаса / Фрунзе, Бишкек",
+    "coordinates": {
+      "lat": 42.88166,
+      "lon": 74.58878
+    },
+    "osm_ref": {
+      "node_id": null,
+      "way_id": null,
+      "relation_id": null
+    }
+  },
+  "observation": {
+    "observed_at_local": "2025-11-23T14:00:00+06:00",
+    "time_of_day": "Обед",
+    "weekday": "Воскресенье",
+    "congestion_level": "Высокая",
+    "problem_summary": "затор на северном подходе Манаса; высокие потоки по Фрунзе и конфликты левых поворотов",
+    "primary_causes": [
+      "высокий продольный транзит по Манаса",
+      "конфликтные левоповоротные фазы на обоих магистралях"
+    ],
+    "is_recurrent_issue": true,
+    "confidence": 0.7
+  },
+  "proposed_solutions": [
+    {
+      "order": 1,
+      "type": "Адаптивный светофор",
+      "description": "перераспределение фаз в пользу продольного потока Манаса и динамическое управление в зависимости от интенсивности",
+      "estimated_cost_usd": 48000.0,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 28,
+        "avg_delay_minutes_reduction": 2.4
+      },
+      "effectiveness_score": 68,
+      "payback_period_years": 1.3,
+      "environmental_impact": "Снижение CO₂ на ~8% в зоне перекрёстка",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Низкий"
+      }
+    },
+    {
+      "order": 2,
+      "type": "Удлинение накопителей",
+      "description": "расширение накопительных полос на северном подходе Манаса для предотвращения блокировок коробки перекрёстка",
+      "estimated_cost_usd": 230000.0,
+      "implementation_difficulty": "Средняя",
+      "expected_effect": {
+        "delay_reduction_percent": 21,
+        "avg_delay_minutes_reduction": 1.7
+      },
+      "effectiveness_score": 51,
+      "payback_period_years": 3.1,
+      "environmental_impact": "Снижение CO₂ на ~6% благодаря уменьшению простоя",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": true,
+        "stakeholder_risk": "Средний"
+      }
+    },
+    {
+      "order": 3,
+      "type": "Оптимизация левых поворотов",
+      "description": "введение защитных фаз для левых поворотов и ограничение левых манёвров в пиковые часы",
+      "estimated_cost_usd": 15000.0,
+      "implementation_difficulty": "Низкая",
+      "expected_effect": {
+        "delay_reduction_percent": 16,
+        "avg_delay_minutes_reduction": 1.2
+      },
+      "effectiveness_score": 60,
+      "payback_period_years": 0.8,
+      "environmental_impact": "Снижение CO₂ на ~5% за счёт уменьшения остановок",
+      "public_impact": "Средний",
+      "risks": {
+        "land_acquisition": false,
+        "uti_relocation": false,
+        "stakeholder_risk": "Низкий"
+      }
+    }
+  ],
+  "data_needed_for_refinement": [
+    "Почасовые интенсивности по подходам",
+    "Доли ТС (легк./общ. трансп./такси/груз.)",
+    "Длины очередей",
+    "Пешеходные потоки по фазам",
+    "Профили скоростей и насыщения"
+  ],
+  "consequence_if_ignored": "рост задержек на 25–40%, удлинение очередей до 2–3 циклов, замедление коридора Манаса и повышение выбросов на 10–15% на горизонте 1–3 года"
+}
